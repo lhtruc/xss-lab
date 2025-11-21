@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "xss-lab",
+  "version": "1.0.0",
+  "description": "A demo lab for XSS attack - Information Security",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhtruc/xss-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lhtruc/xss-lab/issues"
+  },
+  "homepage": "https://github.com/lhtruc/xss-lab#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.4"
+  }
+}

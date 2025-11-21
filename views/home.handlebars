@@ -1,0 +1,35 @@
+<div class="text-center mb-5">
+    <h2 class="fw-bold">XSS ATTACK</h2>
+    <p class="text-muted">Select a module to begin testing vulnerabilities</p>
+</div>
+
+<div class="row justify-content-center g-4">
+
+    <!-- Reflected -->
+    <div class="col-md-4 col-lg-3">
+        <div class="card card-xss shadow-sm text-center p-3">
+            <h4 class="fw-bold mb-2">Reflected XSS</h4>
+            <p class="text-muted">Input is reflected instantly in the response.</p>
+            <a href="/reflected" class="btn btn-primary w-100 mt-2">Start</a>
+        </div>
+    </div>
+
+    <!-- Stored -->
+    <div class="col-md-4 col-lg-3">
+        <div class="card card-xss shadow-sm text-center p-3">
+            <h4 class="fw-bold mb-2">Stored XSS</h4>
+            <p class="text-muted">Payload is saved & executed later for users.</p>
+            <a href="/stored" class="btn btn-danger w-100 mt-2">Start</a>
+        </div>
+    </div>
+
+    <!-- DOM -->
+    <div class="col-md-4 col-lg-3">
+        <div class="card card-xss shadow-sm text-center p-3">
+            <h4 class="fw-bold mb-2">DOM-based XSS</h4>
+            <p class="text-muted">Executed purely on the client side (DOM).</p>
+            <a href="/dom" class="btn btn-warning w-100 mt-2">Start</a>
+        </div>
+    </div>
+
+</div>

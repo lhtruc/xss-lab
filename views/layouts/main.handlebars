@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Lab - Information Security</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .card-xss {
+            transition: .2s;
+        }
+        .card-xss:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container">
+            <span class="navbar-brand fw-bold">🔐 XSS Attack Lab</span>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <main class="container flex-grow-1 mb-5">
+        {{{body}}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-dark text-secondary py-3 text-center px-4">
+        <small>HCMUTE — XSS Lab — Information Security</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
