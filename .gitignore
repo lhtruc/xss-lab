@@ -45,7 +45,6 @@ es/
 .yarn/
 .pnp.*
 .pnpm-debug.log
-package-lock.json
 
 
 # ---------------------------------------
