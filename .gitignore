@@ -45,6 +45,8 @@ es/
 .yarn/
 .pnp.*
 .pnpm-debug.log
+package-lock.json
+
 
 # ---------------------------------------
 # VS Code
@@ -91,3 +93,5 @@ Desktop.ini
 *.tmp
 *.swp
 *.swo
+package-lock.json
+package-lock.json
