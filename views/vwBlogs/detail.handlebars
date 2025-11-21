@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">{{blog.title}}</h2>
+        <p class="text-muted">Stored XSS testing ground</p>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <p>{{blog.content}}</p>
+        </div>
+    </div>
+
+    <!-- COMMENTS -->
+    <h4 class="fw-bold mt-5 mb-3">Comments</h4>
+
+    {{#each comments}}
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <h6 class="fw-bold">{{this.username}}</h6>
+
+            <!-- RAW OUTPUT: Stored XSS sẽ chạy tại đây -->
+            <p class="mt-2">{{{this.text}}}</p>
+
+            <small class="text-muted">{{this.created_at}}</small>
+        </div>
+    </div>
+    {{/each}}
+
+    <!-- COMMENT FORM -->
+    {{#if user}}
+    <div class="card shadow-sm mt-4">
+        <div class="card-body">
+            <h5 class="fw-bold mb-3">Leave a comment</h5>
+
+            <form method="POST" action="/comments/add">
+                <input type="hidden" name="blog_id" value="{{blog.id}}">
+
+                <textarea name="comment" required class="form-control mb-3" rows="4"></textarea>
+
+                <button class="btn btn-primary w-100">Submit Comment</button>
+            </form>
+        </div>
+    </div>
+    {{else}}
+    <div class="alert alert-info mt-4">
+        <a href="/users/login">Login</a> to leave a comment
+    </div>
+    {{/if}}
+
+</div>

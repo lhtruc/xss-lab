@@ -1,0 +1,18 @@
+<div class="text-center mb-5">
+    <h2 class="fw-bold">All Blogs</h2>
+    <p class="text-muted">Select a post to read and test stored XSS</p>
+</div>
+
+<div class="row g-4">
+    {{#each blogs}}
+    <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column">
+                <h4 class="fw-bold">{{this.title}}</h4>
+                <p class="text-muted">{{this.summary}}</p>
+                <a href="/blogs/{{this.id}}" class="btn btn-primary mt-auto">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

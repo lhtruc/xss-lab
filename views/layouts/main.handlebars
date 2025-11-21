@@ -22,17 +22,35 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-dark bg-dark mb-4">
-        <div class="container d-flex align-items-center gap-2">
-            <span class="navbar-brand fw-bold mb-0">
-                <a href="/" class="text-decoration-none text-white">🔐 XSS Attack Lab</a>
-            </span>
+        <div class="container d-flex align-items-center justify-content-between">
 
-            <a href="/guide"
-            class="px-2 py-0 text-white text-decoration-none rounded small">
-                Guide
-            </a>
+            <div class="d-flex align-items-center gap-2">
+                <span class="navbar-brand fw-bold mb-0">
+                    <a href="/" class="text-decoration-none text-white">🔐 XSS Attack Lab</a>
+                </span>
+
+                <a href="/guide"
+                    class="px-2 py-0 text-white text-decoration-none rounded small">
+                    Guide
+                </a>
+            </div>
+
+            {{!-- Nếu user đã login thì hiện --}}
+            {{#if user}}
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="text-white small">
+                        👤 {{user.username}}
+                    </span>
+
+                    <a href="/users/logout" class="btn btn-sm btn-outline-light">
+                        Logout
+                    </a>
+                </div>
+            {{/if}}
         </div>
     </nav>
+
 
 
     <!-- Body -->
